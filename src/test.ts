@@ -3,12 +3,13 @@
  */
 
 // Importa o Zone.js para testes.
-import 'zone.js/testing';
+import 'zone.js/dist/zone-testing';
 import { getTestBed } from '@angular/core/testing';
 import {
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting
 } from '@angular/platform-browser-dynamic/testing';
+import 'jest';
 
 declare const require: {
   context(path: string, deep?: boolean, filter?: RegExp): {
@@ -20,11 +21,11 @@ declare const require: {
 // Inicializa o ambiente de teste do Angular.
 getTestBed().initTestEnvironment(
   BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting(),
+  platformBrowserDynamicTesting()
 );
 
 // Encontra todos os testes.
 const context = require.context('./', true, /\.spec\.ts$/);
 
 // Carrega os módulos.
-context.keys().forEach(context);
+context.keys().map(context);

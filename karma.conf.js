@@ -11,7 +11,8 @@ module.exports = function (config) {
     ],
     client: {
       jasmine: {
-        // Configurações do Jasmine
+        random: false, // Desativa a execução aleatória dos testes
+        seed: 4321 // Define uma semente específica (opcional)
       },
       clearContext: false
     },

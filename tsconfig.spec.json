@@ -2,13 +2,15 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
-    "types": ["jasmine", "node"],  // Adicione "jasmine" aqui
-    "module": "commonjs",
-    "target": "es2020",
-    "allowJs": true
+    "types": ["jasmine", "node"]
   },
+  "files": [
+    "src/test.ts",
+    "src/polyfills.ts"
+  ],
   "include": [
+    "src/**/*.spec.ts",
     "src/**/*.d.ts",
-    "cypress/**/*.ts"
+    "src/test.ts"
   ]
 }
