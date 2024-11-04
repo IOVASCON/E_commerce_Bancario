@@ -9,7 +9,8 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 
 [*.ts]
-quote_type = single
+# Note: `quote_type` is not an official EditorConfig property.
+# For managing quotes, use a linter like ESLint or Prettier.
 ij_typescript_use_double_quotes = false
 
 [*.md]

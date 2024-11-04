@@ -1,0 +1,51 @@
+<div class="checkout">
+    <h2>Checkout</h2>
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+      <!-- Customer Information -->
+      <div formGroupName="customer" class="form-section">
+        <h3>Informações do Cliente</h3>
+        <label for="firstName">Nome:</label>
+        <input id="firstName" formControlName="firstName" placeholder="Digite seu nome">
+        
+        <label for="lastName">Sobrenome:</label>
+        <input id="lastName" formControlName="lastName" placeholder="Digite seu sobrenome">
+        
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" placeholder="Digite seu email" type="email">
+      </div>
+  
+      <!-- Address Information -->
+      <div formGroupName="address" class="form-section">
+        <h3>Endereço</h3>
+        <label for="street">Rua:</label>
+        <input id="street" formControlName="street" placeholder="Digite sua rua">
+        
+        <label for="city">Cidade:</label>
+        <input id="city" formControlName="city" placeholder="Digite sua cidade">
+        
+        <label for="zipCode">CEP:</label>
+        <input id="zipCode" formControlName="zipCode" placeholder="Digite seu CEP">
+      </div>
+  
+      <!-- Payment Information -->
+      <div formGroupName="payment" class="form-section">
+        <h3>Informações de Pagamento</h3>
+        <label for="cardType">Tipo de Cartão:</label>
+        <select id="cardType" formControlName="cardType">
+          <option value="Visa">Visa</option>
+          <option value="MasterCard">MasterCard</option>
+          <option value="Amex">Amex</option>
+        </select>
+        
+        <label for="cardNumber">Número do Cartão:</label>
+        <input id="cardNumber" formControlName="cardNumber" placeholder="Digite o número do cartão" type="text">
+        
+        <label for="expirationDate">Data de Expiração:</label>
+        <input id="expirationDate" formControlName="expirationDate" placeholder="MM/AA" type="text">
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" class="submit-button">Finalizar Pedido</button>
+    </form>
+  </div>
+  

@@ -1,1 +1,202 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo Principal */
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout Geral */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #004085;
+  color: #fff;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header .logo {
+  font-size: 24px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a {
+  margin: 0 15px;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #004085;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #002d66;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #004085;
+  color: #004085;
+}
+
+.btn-outline:hover {
+  background-color: #004085;
+  color: #fff;
+}
+
+/* Rodapé */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* Cartão de Produto */
+.product-card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 15px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+
+.product-card .content {
+  padding: 15px;
+}
+
+.product-card .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #004085;
+  margin: 10px 0;
+}
+
+.product-card .description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Carrinho de Compras */
+.cart {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item img {
+  width: 80px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.cart-item-details {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.cart-item-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.cart-item-price {
+  color: #004085;
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+  }
+
+  .product-card {
+    margin: 10px 0;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item img {
+    margin-bottom: 10px;
+  }
+}

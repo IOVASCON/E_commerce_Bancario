@@ -1,0 +1,41 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "sku": "prod1",
+        "name": "Seguro de Vida Completo",
+        "description": "Cobertura completa para seguros de vida.",
+        "unitPrice": 100.0,
+        "imageUrl": "/assets/images/seguro-vida.png",
+        "active": true,
+        "unitsInStock": 20,
+        "dateCreated": "2023-01-01T10:00:00",
+        "lastUpdate": "2023-01-01T10:00:00",
+        "categoryId": 1
+      },
+      {
+        "id": 2,
+        "sku": "prod2",
+        "name": "Seguro de Carro",
+        "description": "Cobertura completa para veículos.",
+        "unitPrice": 150.0,
+        "imageUrl": "/assets/images/seguro-carro.png",
+        "active": true,
+        "unitsInStock": 15,
+        "dateCreated": "2023-01-01T10:00:00",
+        "lastUpdate": "2023-01-01T10:00:00",
+        "categoryId": 2
+      }
+    ],
+    "product-categories": [
+      {
+        "id": 1,
+        "categoryName": "Seguro de Vida"
+      },
+      {
+        "id": 2,
+        "categoryName": "Seguro de Carro"
+      }
+    ]
+  }
+  

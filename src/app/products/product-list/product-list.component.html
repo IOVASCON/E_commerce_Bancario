@@ -1,0 +1,24 @@
+<div class="product-list-container">
+    <h2>Produtos Bancários</h2>
+    <div class="filter-section">
+      <label for="category">Filtrar por Categoria:</label>
+      <select id="category" [(ngModel)]="selectedCategoryId" (change)="getProducts()">
+        <option value="0">Todas</option>
+        <option value="1">Seguro de Vida</option>
+        <option value="2">Seguro de Carro</option>
+        <option value="3">Seguro Residencial</option>
+        <option value="4">Plano de Previdência Privada</option>
+      </select>
+    </div>
+  
+    <div class="product-grid">
+      <div *ngFor="let product of products" class="product-card">
+        <img [src]="product.imageUrl" alt="{{ product.name }}">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <p class="price">Preço: {{ product.unitPrice | currency:'BRL' }}</p>
+        <button (click)="addToCart(product)">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+  </div>
+  
